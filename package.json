@@ -1,0 +1,33 @@
+{
+  "name": "fiap-lambda-authentication-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverless.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "sls:deploy": "export NODE_ENV=dev && npm run build && sls package && sls deploy",
+    "sls:start": "export NODE_ENV=dev && npm run build && sls offline start --noAuth --noTimeout --noPrependStageInUrl"
+  },
+  "engines": {
+    "node": ">=18x"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.530.0",
+    "amazon-cognito-identity-js": "^6.3.12",
+    "http-status-codes": "^2.3.0",
+    "joi": "^17.12.2"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^3.38.0",
+    "@types/aws-lambda": "^8.10.136",
+    "@types/node": "^20.11.25",
+    "json-schema-to-ts": "^3.0.0",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-offline": "^13.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT"
+}

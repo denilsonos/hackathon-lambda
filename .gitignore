@@ -1,0 +1,13 @@
+# package directories
+node_modules
+jspm_packages
+package-lock.json
+dist
+.env
+
+# Serverless directories
+.serverless
+.dynamodb
+
+# esbuild directories
+.esbuild
