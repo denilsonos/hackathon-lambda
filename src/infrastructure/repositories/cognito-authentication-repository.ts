@@ -9,8 +9,8 @@ export class CognitoAuthenticationRepository implements AuthenticationRepository
 
   public async authenticate(credential: Credential): Promise<Session> {
     return await this.client.authenticate(
-      this.client.user(credential.email),
-      this.client.authentication(credential.email, credential.password)
+      this.client.user(credential.username),
+      this.client.authentication(credential.username, credential.password)
     )
       .then((accessToken) => {
         console.log(`User successfully signed in to Amazon Cognito`)
